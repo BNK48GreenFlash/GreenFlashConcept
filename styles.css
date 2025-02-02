@@ -16,34 +16,13 @@ body {
     padding-bottom: 20px;
 }
 
-/* สำหรับมือถือ */
+/* ปรับสำหรับมือถือ */
 @media (max-width: 768px) {
     body {
-        background-size: contain;  /* ป้องกันการขยายเกิน */
-        background-position: center top;
+        background-size: cover; /* ปรับให้เต็มหน้าจอมือถือ */
+        background-position: center; 
         background-repeat: no-repeat;
-        height: 100vh;
-        padding: 0;
-        margin: 0;
     }
-}
-
-/* สำหรับคอม */
-body {
-    background-image: url('https://i.imgur.com/NAtxQQ4.jpeg'); /* เปลี่ยนลิงก์รูปเป็นของ Eve */
-    background-size: cover; 
-    background-repeat: no-repeat;
-    background-position: center;
-    font-family: Arial, sans-serif;
-    color: white;
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end; 
-    align-items: center;
-    text-align: center;
-    padding-bottom: 20px;
 }
 
 /* ปรับขนาดปุ่มให้เหมาะสม */

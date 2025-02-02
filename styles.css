@@ -59,11 +59,3 @@ button {
   margin-top: 10px;
   transform: translateX(0);
 }
-
-/* ปรับปุ่มให้เล็กลงในมือถือ */
-@media (max-width: 768px) {
-    button {
-        font-size: 1em;
-        padding: 8px 16px;
-    }
-}

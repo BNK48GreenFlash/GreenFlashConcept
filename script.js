@@ -3,4 +3,4 @@ function tweetMessage() {
 #BNK4818thSINGLE";
     const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(message)}`;
     window.open(tweetUrl, '_blank');
-}
+}  

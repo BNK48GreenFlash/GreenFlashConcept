@@ -1,37 +1,31 @@
-@media (max-width: 768px) {
-    body {
-        background-size: cover; /* ✅ ปรับให้เต็มจอมือถือ */
-        background-position: center;
-        background-repeat: no-repeat;
-        padding: 0;
-        height: 100vh;
-    }
-}
-
-/* ✅ ทำให้รูปไม่ถูกบีบในมือถือ */
-@media (max-width: 500px) {
-    body {
-        background-size: contain;
-    }
-}
-
 body {
-    background-image: url('https://i.imgur.com/NAtxQQ4.jpeg'); /* ✅ ใช้รูปจาก Imgur */
-    background-size: cover;
+    background-image: url('https://i.imgur.com/NAtxQQ4.jpeg'); /* ใช้ลิงก์รูปที่อัปโหลด */
+    background-size: 100% auto;  /* ปรับให้กว้างเต็ม 100% และความสูงปรับอัตโนมัติ */
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top center; /* ให้ภาพเริ่มจากด้านบน */
+    background-attachment: fixed;
     font-family: Arial, sans-serif;
     color: white;
     height: 100vh;
-    margin: 0; /* ✅ ลบ margin ที่ทำให้หน้าเว็บล้น */
+    margin: 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; 
+    justify-content: flex-end;
     align-items: center;
     text-align: center;
-    padding-bottom: 50px; /* ✅ ปรับให้เว้นที่สำหรับปุ่ม */
+    padding-bottom: 20px;
 }
 
+/* ปรับสำหรับมือถือ */
+@media (max-width: 768px) {
+    body {
+        background-size: cover; /* ปรับให้เต็มหน้าจอมือถือ */
+        background-position: center; 
+        background-repeat: no-repeat;
+    }
+}
+
+/* ปรับขนาดปุ่มให้เหมาะสม */
 button {
     background-color: #1da1f2;
     color: white;
@@ -40,7 +34,8 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    position: relative; /* ✅ เปลี่ยนจาก absolute เป็น relative */
-    margin-top: 20px; /* ✅ ปรับระยะห่างจากข้อความข้างบน */
-    z-index: 10; /* ✅ ให้ปุ่มอยู่ข้างหน้า */
+    position: absolute;
+    bottom: 50px; /* ลดระยะห่างจากล่างจอ */
+    left: 50%;
+    transform: translateX(-50%);
 }
